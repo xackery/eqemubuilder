@@ -1,6 +1,6 @@
-VERSION=0.0.1
+VERSION=latest
 docker-build:
 	@(docker build -t eqemubuilder .)
 docker-push: docker-build
-	@(docker tag eqemuserver eqemu/builder:$(VERSION))
+	@(docker tag eqemubuilder eqemu/builder:$(VERSION))
 	@(docker push eqemu/builder:$(VERSION))
